@@ -13,6 +13,9 @@ const Hero = () => {
           src="https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=2000&auto=format&fit=crop" 
           alt="Luxury Architecture" 
           className="w-full h-full object-cover"
+          // 🚀 PERFORMANCE OPTIMIZATION:
+          loading="eager"        // Tells browser: "Don't wait, load this NOW."
+          fetchPriority="high"   // Tells browser: "This is the most important image on the page."
         />
       </div>
 
@@ -47,8 +50,6 @@ const Hero = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          // Note: We can reduce the bottom margin slightly now that the arrow is separate, 
-          // but keeping some space ensures text doesn't overlap the arrow on tiny screens.
           className="text-gray-300 font-light text-sm sm:text-lg max-w-xs sm:max-w-xl mx-auto leading-relaxed"
         >
           Specializing in premium residential architecture for DHA Phase 6 & 9. 
