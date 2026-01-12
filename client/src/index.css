@@ -1,0 +1,31 @@
+/* 1. Fonts MUST be first */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* 2. Then Tailwind */
+@import "tailwindcss";
+
+/* 3. Then your Theme Configuration */
+@theme {
+  /* Define the Fonts */
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Montserrat", sans-serif;
+
+  /* Define the Luxury Colors */
+  --color-luxury-black: #050505;
+  --color-luxury-charcoal: #121212;
+  --color-luxury-gold: #D4AF37;
+  --color-luxury-muted: #9CA3AF;
+  
+  --animate-fade-in: fade-in 0.5s ease-out;
+}
+
+/* 4. Global Styles at the bottom */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-luxury-black);
+  color: white;
+  font-family: var(--font-sans);
+}
